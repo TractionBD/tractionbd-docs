@@ -560,3 +560,4 @@ Where:
 | 2.0 | January 2026 | Major update: NBC/NBA architecture, TBDA-59/60 scoring, PCR type weighting, recency rules, temperature model, JIT research, confidence bands, cold start approach, MVP vs Future delineation |
 | 2.1 | January 2026 | Added Feature #20: Conversion Probability Prediction with full technical spec and PRD reference |
 
+<!-- Last updated: 2026-01-21T17:03:08-05:00 -->
