@@ -5,6 +5,9 @@ on:
     paths:
       - 'Core_AI_and_Algorithm_Backend_Functionality_v2.md'
 
+permissions:
+  contents: write
+
 jobs:
   convert:
     runs-on: ubuntu-latest
