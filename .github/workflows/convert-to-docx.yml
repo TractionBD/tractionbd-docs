@@ -1,0 +1,29 @@
+name: Convert Markdown to DOCX
+
+on:
+  push:
+    paths:
+      - 'Core_AI_and_Algorithm_Backend_Functionality_v2.md'
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Pandoc
+        run: sudo apt-get install -y pandoc
+
+      - name: Convert to DOCX
+        run: |
+          pandoc "Core_AI_and_Algorithm_Backend_Functionality_v2.md" \
+            -o "Core_AI_and_Algorithm_Backend_Functionality_v2.docx"
+
+      - name: Commit updated DOCX
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "*.docx"
+          git diff --staged --quiet || git commit -m "Auto-update DOCX from markdown changes"
+          git push
